@@ -1,0 +1,24 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:raw.githubusercontent.com)",
+      "WebFetch(domain:github.com)",
+      "WebFetch(domain:unsplash.com)",
+      "Bash(npm run *)",
+      "PowerShell(Get-ChildItem C:\\\\Users\\\\esut9\\\\my-site\\\\my-app -Recurse -Depth 4 | Where-Object { $_.FullName -notmatch 'node_modules' -and $_.FullName -notmatch '\\\\.next' -and $_.FullName -notmatch '\\\\.git' } | Select-Object FullName)",
+      "Bash(cmd.exe *)",
+      "PowerShell(& \"C:\\\\Program Files\\\\nodejs\\\\npm.cmd\" run build 2>&1)",
+      "PowerShell(New-Item *)",
+      "Bash(npx tsc *)",
+      "Bash(npx next *)",
+      "PowerShell(Copy-Item *)",
+      "WebSearch",
+      "Bash(Get-ChildItem -Path \"C:\\\\Users\\\\esut9\\\\my-site\\\\my-app\" -Recurse -Force)",
+      "Bash(Select-Object FullName)",
+      "Bash(node node_modules/next/dist/bin/next build)",
+      "Bash(ls -la .env* .gitignore)",
+      "Bash(cat .gitignore)",
+      "PowerShell(winget install *)"
+    ]
+  }
+}

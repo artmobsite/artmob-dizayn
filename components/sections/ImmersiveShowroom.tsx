@@ -23,7 +23,7 @@ export default function ImmersiveShowroom() {
   const textY = useTransform(scrollYProgress, [0, 1], ["40px", "-40px"]);
   const imgY = useTransform(scrollYProgress, [0, 1], ["0%", "-8%"]);
   const imgScale = useTransform(scrollYProgress, [0, 1], [1.08, 1]);
-  const opacity = useTransform(scrollYProgress, [0, 0.2, 0.8, 1], [0, 1, 1, 0]);
+  const opacity = useTransform(scrollYProgress, [0, 0.04, 0.96, 1], [0, 1, 1, 0]);
 
   return (
     <section

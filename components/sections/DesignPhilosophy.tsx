@@ -62,8 +62,8 @@ export default function DesignPhilosophy() {
     <section
       id="philosophy"
       ref={containerRef}
-      className="relative bg-[#0A0A0A]"
-      style={{ height: "300vh" }}
+      className="relative bg-[#0A0A0A] philosophy-height"
+      style={{}}
     >
       <div className="sticky top-0 h-dvh overflow-hidden grid grid-cols-1 lg:grid-cols-2">
 

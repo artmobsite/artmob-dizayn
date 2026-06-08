@@ -25,7 +25,7 @@ function TestimonialCard({
       className="relative cursor-default"
       initial={{ opacity: 0, y: 30, filter: "blur(6px)" }}
       whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
-      viewport={{ once: true, margin: "-5%" }}
+      viewport={{ once: true, margin: "0px" }}
       transition={{ duration: 1.05, delay: index * 0.13, ease: LUXURY_EASE }}
       onHoverStart={() => setHovered(true)}
       onHoverEnd={() => setHovered(false)}

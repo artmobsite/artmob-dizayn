@@ -218,6 +218,15 @@ section {
   border: 1px solid rgba(255, 255, 255, 0.07);
 }
 
+.philosophy-height {
+  height: 200vh;
+}
+@media (min-width: 1024px) {
+  .philosophy-height {
+    height: 300vh;
+  }
+}
+
 .text-gradient-bronze {
   background: linear-gradient(125deg, #D4AF37 0%, #F6D97A 45%, #9B7B2E 100%);
   -webkit-background-clip: text;

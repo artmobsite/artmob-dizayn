@@ -3,7 +3,7 @@
 import { useRef, useState, useCallback } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { motion, useInView } from "framer-motion";
+import { motion } from "framer-motion";
 import { SYSTEMS } from "@/lib/constants";
 import { LUXURY_EASE } from "@/lib/animations";
 import TextReveal from "@/components/animations/TextReveal";
@@ -22,7 +22,6 @@ function SystemCard({
   const [loaded, setLoaded] = useState(false);
   const [mouse, setMouse] = useState({ x: 50, y: 50 });
   const ref = useRef<HTMLDivElement>(null);
-  const isInView = useInView(ref, { once: true, margin: "-5%" });
 
   const handleMouseMove = useCallback((e: React.MouseEvent<HTMLDivElement>) => {
     if (!ref.current) return;
@@ -41,7 +40,8 @@ function SystemCard({
         size === "large" ? "aspect-[3/4] lg:aspect-[4/5]" : "aspect-square"
       }`}
       initial={{ opacity: 0, y: 32, filter: "blur(8px)" }}
-      animate={isInView ? { opacity: 1, y: 0, filter: "blur(0px)" } : {}}
+      whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+      viewport={{ once: true, margin: "0px" }}
       transition={{ duration: 1.2, delay, ease: LUXURY_EASE }}
       onMouseMove={handleMouseMove}
       onHoverStart={() => setHovered(true)}

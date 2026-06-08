@@ -24,7 +24,7 @@ function ProjectCard({
     <motion.div
       initial={{ opacity: 0, y: 44, filter: "blur(8px)" }}
       whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
-      viewport={{ once: true, margin: "-5%" }}
+      viewport={{ once: true, margin: "0px" }}
       transition={{ duration: 1.15, delay: index * 0.1, ease: LUXURY_EASE }}
     >
       <Link href={project.slug ? `/projeler/${project.slug}` : "/projeler"} className="block">
